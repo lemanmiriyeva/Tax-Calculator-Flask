@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <title>Vergi kalkulyatoru</title>
+</head>
+
+<body>
+    <h1>Vergi kalkulyatoru</h1>
+    <hr>
+    <div class="container">
+        <form method="post">
+            {{ form.csrf_token }}
+            {{form.gross_salary(class_="gross")}}
+            {{form.options(class_="options")}}
+            <button type="submit">Hesabla</button>
+        </form>
+        {% if show_block %}
+        <div class="information">
+            <div class="gross_salary">
+                <p><b>Vergiyə cəlb olunan məbləğ:</b>&nbsp;&nbsp;{{'%0.2f'|format(f|float)}} ₼</p>
+            </div>
+            <p><b>Gəlir vergisi:</b> &nbsp;{{'%0.2f'|format(g|float)}} ₼</p>
+            <p><b>DSMF ayırmaları:</b> &nbsp;{{'%0.2f'|format(d|float)}} ₼</p>
+            <p><b>İşsizlikdən sığorta haqqı:</b> &nbsp;{{'%0.2f'|format(issizlik|float)}} ₼</p>
+            <p><b>İcbari tibbi sığorta haqqı:</b> &nbsp;{{'%0.2f'|format(i|float)}} ₼</p>
+            <div class="nett_salary">
+                <p><b>NETT əmək haqqı:</b> &nbsp;{{'%0.2f'|format(y|float)}} ₼</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

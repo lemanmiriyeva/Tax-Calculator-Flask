@@ -1,0 +1,89 @@
+.container{
+    width: 64%;
+    margin:auto;
+    margin-top: 3%;
+    border: 1px solid rgb(184, 179, 179);
+    padding: 20px;
+    height: 70vh;
+    border-radius: 10px;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+form{
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gross{
+    width: 25%;
+    height: 40px;
+    font-size: 20px;
+    padding: 13px;
+    
+    outline: none !important;
+    border-radius: 10px;
+    border: 1px solid rgb(184, 179, 179);
+}
+h1{
+    text-align: center;
+}
+.options{
+    width: 45%;
+    font-size: 20px;
+    padding: 22px;
+    border-radius: 10px;
+    
+    outline: none !important;
+    border: 1px solid rgb(184, 179, 179);
+}
+.options option{
+    height: 40px;
+}
+button{
+    width: 25%;
+    font-size:20px;padding: 22px;
+    border-radius: 10px;
+    outline: none !important;
+    border: none;
+    background-color: rgb(6, 161, 6);
+    color: #fff;
+}
+.options {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Some browsers will not display the caret when using calc, so we put the fallback first */ 
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+  }
+  /*For IE*/
+  .options::-ms-expand { display: none; }
+  .information{
+    font-size: 22px;
+    margin-top: 3%;
+  }
+  .gross_salary{
+    width: 50%;
+    padding: 3px 10px;
+    background-color: rgb(52, 52, 248);
+    border-radius: 20px;
+    color: #fff;
+  }
+  .nett_salary{
+    width: 40%;
+    padding: 3px 10px;
+    background-color: rgb(240, 29, 29);
+    border-radius: 20px;
+    color: #fff;
+  }
